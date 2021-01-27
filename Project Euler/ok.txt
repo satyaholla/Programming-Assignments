@@ -1,0 +1,41 @@
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+tot = 0
+for i1 in range(1,10):
+    for i2 in range(9):
+        for i3 in range(8):
+            for i4 in range(7):
+                for i5 in range(6):
+                    for i6 in range(5):
+                        for i7 in range(4):
+                            for i8 in range(3):
+                                for i9 in range(2):
+                                    numberscpy = numbers[:]
+                                    n = []
+                                    n.append(numberscpy[i1])
+                                    numberscpy.pop(i1)
+                                    n.append(numberscpy[i2])
+                                    numberscpy.pop(i2)
+                                    n.append(numberscpy[i3])
+                                    numberscpy.pop(i3)
+                                    n.append(numberscpy[i4])
+                                    numberscpy.pop(i4)
+                                    n.append(numberscpy[i5])
+                                    numberscpy.pop(i5)
+                                    n.append(numberscpy[i6])
+                                    numberscpy.pop(i6)
+                                    n.append(numberscpy[i7])
+                                    numberscpy.pop(i7)
+                                    n.append(numberscpy[i8])
+                                    numberscpy.pop(i8)
+                                    n.append(numberscpy[i9])
+                                    numberscpy.pop(i9)
+                                    n.append(numberscpy[0])
+                                    s = ''.join(n)
+                                    if int(s[3]) % 2 == 0 and\
+                                       int(s[2:5]) % 3 == 0 and\
+                                       int(s[5]) % 5 == 0 and\
+                                       int(s[4:7]) % 7 == 0 and\
+                                       int(s[5:8]) % 11 == 0 and\
+                                       int(s[6:9]) % 13 == 0 and\
+                                       int(s[7:10]) % 17 == 0:
+                                           tot += int(s)
